@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f2">
+    <title>Chronicle | History by date</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/chat.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="Chronicle home">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span>Chronicle</span>
+            </a>
+            <div class="model-label"><span class="model-dot"></span>Qwen 2.5 <span class="model-divider">/</span> local</div>
+        </header>
+
+        <main class="chat-layout">
+            <section class="conversation" id="conversation" aria-label="History date conversation">
+                <div class="conversation-inner">
+                    <div class="welcome" id="welcome">
+                        <div class="welcome-rule"><span></span><span></span><span></span></div>
+                        <p class="overline">THE HISTORY DATE DESK</p>
+                        <h1>When did it<br><em>happen?</em></h1>
+                        <div class="suggestions" aria-label="Try a question">
+                            <button type="button" class="suggestion" data-prompt="When was the Battle of Hastings?">Battle of Hastings <span>↗</span></button>
+                            <button type="button" class="suggestion" data-prompt="When did the first Moon landing happen?">First Moon landing <span>↗</span></button>
+                            <button type="button" class="suggestion" data-prompt="When did Constantinople fall?">Fall of Constantinople <span>↗</span></button>
+                        </div>
+                    </div>
+                    <div class="messages" id="messages" aria-live="polite" aria-relevant="additions"></div>
+                </div>
+            </section>
+
+            <div class="composer-wrap">
+                <form class="composer" id="chat-form">
+                    <label class="visually-hidden" for="prompt">Ask about a historical event</label>
+                    <textarea id="prompt" name="prompt" rows="1" placeholder="Ask about a historical event..." required></textarea>
+                    <button class="send-button" type="submit" aria-label="Send question" title="Send question">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" /></svg>
+                    </button>
+                </form>
+                <div class="composer-foot"><span>DATES, NOT DISCOURSES</span><span>Answers by Qwen</span></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
