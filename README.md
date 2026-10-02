@@ -2,6 +2,11 @@
 
 A small history-date chat app. Ask about a historical event in the browser and get its date from a local Qwen model through Ollama.
 
+## Demo
+
+https://github.com/user-attachments/assets/5003fb0b-bb11-4d07-b58a-49aa3b58325e
+
+
 ## Requirements
 
 - Node.js 18.11 or newer
